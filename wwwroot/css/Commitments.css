@@ -1,0 +1,101 @@
+.commitment {
+    background-color: rgb(251, 211, 209);
+    font: 14px/18px Helvetica, Arial, sans-serif;
+    color: #222;
+    padding: 20px 0;
+}
+
+.commitment_list {
+    display: flex;
+    list-style: none;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.commitment_item {
+    align-items: center;
+    display: flex;
+    padding: 0 13px;
+    width: 33.333%;
+}
+
+.commitment_item--icon {
+    align-items: center;
+    background-color: #ed1164;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin-right: 15px;
+    width: 50px;
+}
+
+.commitment_item--icon .icon_genuine {
+    background-position: -135px -55px;
+    height: 29px;
+    width: 27px;
+    background-image: url(https://cdn.tgdd.vn/mwgcart/stag-bluekids/images/common/desktop/icon_common@2x.png?v=4);
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 350px 350px;
+}
+
+.commitment_item--icon .icon_change {
+    background-position: -170px -55px;
+    height: 29px;
+    width: 24px;
+    background-image: url(https://cdn.tgdd.vn/mwgcart/stag-bluekids/images/common/desktop/icon_common@2x.png?v=4);
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 350px 350px;
+}
+
+.commitment_item--icon .icon_free_ship {
+    background-position: -200px -55px;
+    height: 22px;
+    width: 28px;
+    background-image: url(https://cdn.tgdd.vn/mwgcart/stag-bluekids/images/common/desktop/icon_common@2x.png?v=4);
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 350px 350px;
+}
+
+.commitment_item--content {
+    width: calc(100% - 57px);
+}
+
+.commitment_item--content-ct {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+}
+
+h6 {
+    margin-bottom: 0;
+}
+
+.commitment_item--content-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.li_content_note {
+    font-size: 13px;
+    text-transform: initial;
+    font-weight: initial;
+}
+
+.commitment_link {
+    color: #023f88;
+    text-decoration: none;
+    line-height: 23px;
+}

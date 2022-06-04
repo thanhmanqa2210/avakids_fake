@@ -1,0 +1,233 @@
+@model AvaKids_188269.Models.CollectionDataModel
+@{
+    ViewData["Title"] = "Đồ chơi trạm cảnh sát tuần tra & cứu hỏa biển LEGO CITY 60308|AVAKids";
+}
+
+<div class="product_details_container">
+    <div class="breadcrumb">
+        <a href="#">Đồ chơi</a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="#">Đồ chơi Lego</a>
+    </div>
+    <div class="details">
+        <div class="detail_left">
+            <div class="detail_left_img">
+                <div>
+                    <div class="img_list">
+                        @{
+                            for (var i = 0; i < @Model.Details.imgs.Count(); i++)
+                            {
+                                <img class="img" src="@Model.Details.imgs[@i]" alt="" />
+                            }
+                        }
+                    </div>
+                </div>
+                <div class="zoom_slider">
+                    <div class="zoom"></div>
+                    <div class="slide">
+                        <button type="button" class="prev"></button>
+                        <div class="slide_position">
+                            @{
+                                <span class="slide_position_pos">1</span><span
+                                    class="slide_length">@Model.Details.imgs.Count()</span>
+                            }
+                        </div>
+                        <button type="button" class="next"></button>
+                    </div>
+                </div>
+                <div class="list_slide">
+                    @{
+                        for (var i = 0; i < @Model.Details.imgs.Count(); i++)
+                        {
+                            <button class="list_slide_btn item_active">
+                                <img class="item_active_img"
+                                src="@Model.Details.imgs[@i]"
+                                alt="" />
+                            </button>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="product_info">
+                <h2 class="product_info--title">THÔNG TIN SẢN PHẨM</h2>
+                <div class="product_info--features">
+                    <h3 class="product_info--features--title">Đặc điểm nổi bật</h3>
+                    <ul class="list_feature">
+                        @{
+                            foreach (var i in Model.Details.Features.SalientFeature)
+                            {
+                                <li class="item_feature">
+                                    <a href="#">@i.ProductLink</a>
+                                    @if (i.ProductLink != "")
+                                    {
+                                        <span>&nbsp;</span>
+                                    }
+                                    <p>@i.ProductDescription</p>
+                                </li>
+
+                            }
+                        }
+                    </ul>
+                </div>
+                <div class="product_info--tutorials">
+                    <h3 class="product_info--tutorials--title">Hướng dẫn sử dụng</h3>
+                    <ul class="list_tutorial">
+                        @{
+                            foreach (var i in Model.Details.Tutorials.Tutorial)
+                            {
+                                <li class="item_tutorial">
+                                    <a href="#">@i.ProductLink</a>
+                                    @if (i.ProductLink != "")
+                                    {
+                                        <span>&nbsp;</span>
+                                    }
+                                    <p>@i.ProductDescription</p>
+                                </li>
+
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="detail_right">
+            <h3 class="detail_right--title">@Model.Details.Title</h3>
+            <div class="detail_right_top">
+                <div class="detail_right_price">
+                    <span class="price_current">@Model.Details.priceNew()<span>₫</span>
+                    </span>
+                    <span class="price_old">@Model.Details.priceOld()<span>₫</span></span>
+                    <span class="price_percent">-@Model.Details.Price_percent%</span>
+                </div>
+                <div class="product_code">@Model.Details.Product_code</div>
+            </div>
+            <div class="promotion">
+                <div class="promotion_time">Khuyến mãi (Đến @Model.Details.PromotionDate<span>)</span></div>
+                <ul class="discount_code_list">
+                    <li class="discount_code_item">
+                        Nhập mã AVAKID giảm 10% tối đa 100.000đ cho đơn hàng từ 300.000đ trở lên khi thanh toán qua Ví
+                        Moca trên ứng dụng Grab
+                        <a class="discount_code_item--detail" href="#">(click xem chi tiết)</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btns">
+                <button type="button" class="btn btn-addcart">
+                    Mua hàng
+                </button>
+                <button type="button" class="btn btn-market">Xem cửa hàng còn hàng</button>
+            </div>
+            <div class="detail_right_policy">
+                <div class="detail_right_policy--item doitra">
+                    <div class="iconl">
+                        <i class="icon_doitra"></i>
+                    </div>
+                    <p class="detail_right_policy--item_text">
+                        Không áp dụng đổi trả, bảo hành (Không bao gồm xe đồ chơi điều khiển) <a href="#">Xem chi
+                            tiết</a>
+                    </p>
+                </div>
+                <div class="detail_right_policy--item free_delivery">
+                    <div class="iconl">
+                        <i class="icon_free_delivery"></i>
+                    </div>
+                    <p class="detail_right_policy--item_text">
+                        Miễn phí giao hàng đơn từ 500.000đ trong 10km đầu tiên
+                    </p>
+                </div>
+                <div class="detail_right_policy--item delivery_method">
+                    <div class="iconl">
+                        <i class="icon_delivery_method"></i>
+                    </div>
+                    <p class="detail_right_policy--item_text">
+                        Giao hàng thu tiền, thanh toán online nhiều phương thức
+                    </p>
+                </div>
+                <div class="detail_right_policy--item hot_line">
+                    <div class="iconl">
+                        <i class="icon_hot_line"></i>
+                    </div>
+                    <p class="detail_right_policy--item_text">
+                        Tổng đài: <a class="phone_number" href="#">1900.866.874</a>
+                        (7h30 - 22h00)
+                    </p>
+                </div>
+            </div>
+            <div class="detail_right_detail_info">
+                <p class="detail_info_title">Thông tin chi tiết</p>
+                <div class="detail_info_content">
+                    <ul class="detail_info-article">
+                        @{
+                            foreach (var i in Model.Details.DetailsInfo)
+                            {
+                                <li class="detail_info-article--item">
+                                    <p class="txt01">@i.Name</p>
+                                    @{
+                                        if (i.Description.quantity() >= 2)
+                                        {
+                                            <div class="listDs">
+                                                @{
+                                                    foreach (var j in i.Description.ListDs)
+                                                    {
+                                                        <p class="itemDs">@j</p>
+                                                    }
+                                                }
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <p class="txt02">@i.Description.ListDs[0]</p>
+                                        }
+                                    }
+                                </li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="other_toys">
+        <h3 class="other_toys--title">
+            Đồ chơi khác
+        </h3>
+        <div class="list_toys">
+            @{
+                foreach (var i in Model.ProductsOthers)
+                {
+                    <div class="toy_item_content">
+                        <div class="toy_item">
+                            <div class="toy_img">
+                                <img src="@i.img" class="toy_item--img" alt="@i.Title" />
+                            </div>
+                            <h3 class="toy_item--description">@i.Title</h3>
+                            <div class="toy_item--price">
+                                <div class="toy_item--price--current">@i.priceNew()₫</div>
+                                <div class="toy_item--price--old">
+                                    <p class="price--old">@i.priceOld()₫</p>
+                                    <p class="price--percent">@i.Price_percent%</p>
+                                </div>
+                            </div>
+                            <button class="btn-buy">
+                                <p class="btn-buy--txt">Chọn mua</p>
+                            </button>
+                        </div>
+                    </div>
+                }
+            }
+            <div>
+            </div>
+        </div>
+        <div class="cmt_avakids">
+            <div class="cmt_list">
+                <h3 class="cmt_title">Hỏi đáp về Đồ chơi trạm cảnh sát tuần tra và cứu hỏa biển Lego City 60308 (297 chi
+                    tiết)</h3>
+            </div>
+            <form class="form new_version">
+                <div class="gr_cm">
+                    <textarea placeholder="Mời bạn bình luận hoặc đặt câu hỏi"></textarea>
+                </div>
+            </form>
+        </div>
+    </div>

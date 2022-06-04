@@ -1,0 +1,63 @@
+html {
+    font-size: 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html::-webkit-scrollbar {
+    width: 5px;
+    height: 0;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: rgb(207, 204, 204);
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: rgb(95, 16, 232);
+    border-radius: 20px;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.btn {
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    align-items: center;
+    width: calc(50% - 4px);
+    cursor: pointer;
+    line-height: 20px;
+    height: 52px;
+    border-radius: 8px;
+}
+
+.btn-addcart {
+    background-color: rgb(237, 17, 100);
+    color: #fff;
+}
+
+.btn-market {
+    background-color: #fff;
+    color: rgb(237, 17, 100);
+    border: 1px solid rgb(237, 17, 100);
+    margin-left: 8px;
+}
