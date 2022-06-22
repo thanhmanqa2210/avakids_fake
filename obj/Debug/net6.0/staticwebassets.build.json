@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dcu+thSv/TIP1hBbYWoE6CNTna1pWzNoFyNyoyLG6bE=",
+  "Hash": "LErgKPsq8B9FdAjAeJcTF0JHM3tao7eEBFGUOOTfdxU=",
   "Source": "AvaKids_188269",
   "BasePath": "_content/AvaKids_188269",
   "Mode": "Default",
@@ -119,6 +119,23 @@
       "OriginalItemSpec": "wwwroot\\css\\productDetails.css"
     },
     {
+      "Identity": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Program\\C#\\Basic\\AvaKids_188269\\wwwroot\\css\\Products.css",
+      "SourceId": "AvaKids_188269",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Program\\C#\\Basic\\AvaKids_188269\\wwwroot\\",
+      "BasePath": "_content/AvaKids_188269",
+      "RelativePath": "css/Products.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Products.css"
+    },
+    {
       "Identity": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Program\\C#\\Basic\\AvaKids_188269\\wwwroot\\css\\site.css",
       "SourceId": "AvaKids_188269",
       "SourceType": "Discovered",
@@ -153,6 +170,40 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Program\\C#\\Basic\\AvaKids_188269\\wwwroot\\js\\ajax-pagination.js",
+      "SourceId": "AvaKids_188269",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Program\\C#\\Basic\\AvaKids_188269\\wwwroot\\",
+      "BasePath": "_content/AvaKids_188269",
+      "RelativePath": "js/ajax-pagination.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\ajax-pagination.js"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Program\\C#\\Basic\\AvaKids_188269\\wwwroot\\js\\FilterProduct.js",
+      "SourceId": "AvaKids_188269",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Program\\C#\\Basic\\AvaKids_188269\\wwwroot\\",
+      "BasePath": "_content/AvaKids_188269",
+      "RelativePath": "js/FilterProduct.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\FilterProduct.js"
+    },
+    {
       "Identity": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Program\\C#\\Basic\\AvaKids_188269\\wwwroot\\js\\formSearch.js",
       "SourceId": "AvaKids_188269",
       "SourceType": "Discovered",
@@ -168,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\formSearch.js"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Program\\C#\\Basic\\AvaKids_188269\\wwwroot\\js\\ListFilter.js",
+      "SourceId": "AvaKids_188269",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Program\\C#\\Basic\\AvaKids_188269\\wwwroot\\",
+      "BasePath": "_content/AvaKids_188269",
+      "RelativePath": "js/ListFilter.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\ListFilter.js"
     },
     {
       "Identity": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Program\\C#\\Basic\\AvaKids_188269\\wwwroot\\js\\site.js",

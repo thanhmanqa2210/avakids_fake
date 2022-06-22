@@ -36,7 +36,7 @@ namespace AvaKids_188269.Controllers
                         "https://cdn.tgdd.vn/Products/Images/10421/258927/do-choi-xe-dia-hinh-cuu-ho-lego-city-60301-1.jpg",
                         "https://cdn.tgdd.vn/Products/Images/10421/258927/do-choi-xe-dia-hinh-cuu-ho-lego-city-60301-2.jpg",
                         "https://cdn.tgdd.vn/Products/Images/10421/258927/do-choi-xe-dia-hinh-cuu-ho-lego-city-60301-3.jpg",
-                        "https://cdn.tgdd.vn/Products/Images/10421/258927/do-choi-xe-dia-hinh-cuu-ho-lego-city-60301-4.jpg",
+                      "https://cdn.tgdd.vn/Products/Images/10421/258927/do-choi-xe-dia-hinh-cuu-ho-lego-city-60301-4.jpg",
                         "https://cdn.tgdd.vn/Products/Images/10421/258927/do-choi-xe-dia-hinh-cuu-ho-lego-city-60301-9.jpg"
                     }},
                new DetailsModel(){ID=3,
@@ -170,6 +170,7 @@ namespace AvaKids_188269.Controllers
         }
         public JsonResult Data(string searchString = "")
         {
+            Console.WriteLine(searchString);
             var value = from search in ListAll()
                         where search.Title.ToLower().IndexOf(searchString.ToLower()) >= 0
                         select search;

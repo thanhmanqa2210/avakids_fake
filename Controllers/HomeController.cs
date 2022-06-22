@@ -2,6 +2,16 @@
 using Microsoft.AspNetCore.Mvc;
 using AvaKids_188269.Models;
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+
+using AvaKids_188269.data;
+using AvaKids_188269.Models.Data;
+
 
 namespace AvaKids_188269.Controllers;
 
@@ -136,36 +146,33 @@ public class HomeController : Controller
                     DetailsInfo = new List<DetailList>() { }
                 };
             }
-            // else{
-            //     model.Details =   new DetailsModel(){ ID = 1, Title = "Đồ chơi trạm cảnh sát tuần tra và cứu hỏa biển Lego City 60308 (297 chi tiết)", Price_old = 1399000, Price_percent = 29, Product_code = "#258922", PromotionDate = "31/5", DetailsInfo = new List<DetailList>() { } };
-            // }
         }
 
         model.Details.DetailsInfo = new List<DetailList>() {
-            new DetailList() { Name = "Thương hiệu", Description =new ItemDescription(){
+            new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "Lego (Đan Mạch)" }
-            } },
-            new DetailList() { Name = "Loại", Description =new ItemDescription(){
+            }} },
+            new DetailList() { Name = "Loại", Description =new List<ItemDescription>(){new ItemDescription(){
               ListDs  =  new List<string>(){"Đồ chơi bé trai","Đồ chơi lắp ráp"}
-               } },
-            new DetailList() { Name = "Độ tuổi", Description =new ItemDescription(){
+               }} },
+            new DetailList() { Name = "Độ tuổi", Description =new List<ItemDescription>(){new ItemDescription(){
               ListDs  =  new List<string>(){"Từ 5 tuổi trở lên"}
-               } },
-            new DetailList() { Name = "Chất liệu", Description =new ItemDescription(){
+               }} },
+            new DetailList() { Name = "Chất liệu", Description =new List<ItemDescription>(){new ItemDescription(){
               ListDs  =  new List<string>(){"Nhựa"}
-               } },
-            new DetailList() { Name = "Kích thước hộp", Description =new ItemDescription(){
+               }} },
+            new DetailList() { Name = "Kích thước hộp", Description =new List<ItemDescription>(){new ItemDescription(){
               ListDs  =  new List<string>(){"38x26x6 cm"}
-               } },
-            new DetailList() { Name = "Trọng lượng", Description =new ItemDescription(){
+               }} },
+            new DetailList() { Name = "Trọng lượng", Description =new List<ItemDescription>(){new ItemDescription(){
               ListDs  =  new List<string>(){"724 g"}
-               } },
-            new DetailList() { Name = "Lưu ý khi sử dụng", Description =new ItemDescription(){
+               }} },
+            new DetailList() { Name = "Lưu ý khi sử dụng", Description =new List<ItemDescription>(){new ItemDescription(){
               ListDs  =  new List<string>(){"Có các chi tiết nhỏ, không dùng cho trẻ dưới 3 tuổi, tránh nguy cơ tiềm ẩn khi trẻ sử dụng sai"}
-               } },
-            new DetailList() { Name = "Nơi sản xuất", Description =new ItemDescription(){
+               }} },
+            new DetailList() { Name = "Nơi sản xuất", Description =new List<ItemDescription>(){new ItemDescription(){
               ListDs  =  new List<string>(){"Trung Quốc"}
-               } },
+               }} },
 
             };
         model.Details.Features.SalientFeature = new List<ProductsInfo>() {
@@ -189,7 +196,124 @@ public class HomeController : Controller
         };
         return View(model);
     }
+    public IActionResult Products()
+    {
+        return View();
 
+    }
+    [HttpGet]
+
+    public IActionResult ProductItem(FilterQuery FilterItem)
+    {
+
+        var listProducts = new ListProducts();
+        var ListData = new List<DetailsModel>();
+        var data = from dataItem in listProducts.Products()
+                   select dataItem;
+        var data1 = from dataItem in listProducts.Products()
+                    select dataItem;
+        string[] newNameFilter = { };
+        string[] newFilterValue = { };
+        int index = 0;
+        if (FilterItem.FilterValue != null && FilterItem.NameFilter != null)
+        {
+            data = from dataItem in listProducts.Products()
+                   from x in dataItem.DetailsInfo
+                   where x.Name.ToUpper() == ""
+                   from y in x.Description
+                   from z in y.ListDs
+                   where z.ToUpper() == FilterItem.FilterValue.ToUpper()
+                   select dataItem;
+            newFilterValue = FilterItem.FilterValue.Split(", ");
+            newNameFilter = FilterItem.NameFilter.Split(", ");
+            // Một Filter
+            if (newNameFilter.Count() == 1)
+            {
+                if (newFilterValue.Count() <= 1)
+                {
+                    data = from dataItem in listProducts.Products()
+                           from x in dataItem.DetailsInfo
+                           where x.Name.ToUpper() == FilterItem.NameFilter.ToUpper()
+                           from y in x.Description
+                           from z in y.ListDs
+                           where z.ToUpper() == FilterItem.FilterValue.ToUpper()
+                           select dataItem;
+                    ListData = data.ToList();
+                }
+                else
+                {
+                    foreach (var item in newFilterValue)
+                    {
+
+                        data1 = from dataItem in listProducts.Products()
+                                from x in dataItem.DetailsInfo
+                                where x.Name.ToUpper() == FilterItem.NameFilter.ToUpper()
+                                from y in x.Description
+                                from z in y.ListDs
+                                where z.ToUpper() == item.ToUpper()
+                                select dataItem;
+                        foreach (var idata1 in data1.ToList())
+                        {
+                            ListData.Add(idata1);
+                        }
+                    }
+                }
+            }
+            // hơn 1 filterName
+            else
+            {
+                var datax = from dataItem in listProducts.Products()
+                            select dataItem;
+                var ListVirtual = new List<DetailsModel>();
+                var ListVirtualx = new List<DetailsModel>();
+                ListVirtualx = datax.ToList();
+                foreach (var itemName in newNameFilter)
+                {
+                    index += 1;
+
+                    foreach (var itemValue in newFilterValue)
+                    {
+                        data = from dataItem in ListVirtualx
+                               from x in dataItem.DetailsInfo
+                               where x.Name.ToUpper() == itemName.ToUpper()
+                               from y in x.Description
+                               from z in y.ListDs
+                               where z.ToUpper() == itemValue.ToUpper()
+                               select dataItem;
+                        foreach (var idata in data.ToList())
+                        {
+                            ListVirtual.Add(idata);
+                        }
+                    }
+                    ListVirtualx = ListVirtual;
+                    ListVirtual = new List<DetailsModel>();
+                    if (index > 1)
+                    {
+
+                    }
+
+                }
+                foreach (var idata in ListVirtualx)
+                {
+                    ListData.Add(idata);
+                }
+            }
+
+        }
+        else if (FilterItem.Order != null)
+        {
+
+        }
+        else if (FilterItem.Price != null)
+        {
+
+        }
+        else
+        {
+            ListData = data.ToList();
+        }
+        return PartialView("~/Views/Home/ProductItem.cshtml", ListData);
+    }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

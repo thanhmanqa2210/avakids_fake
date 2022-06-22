@@ -163,11 +163,11 @@
                                 <li class="detail_info-article--item">
                                     <p class="txt01">@i.Name</p>
                                     @{
-                                        if (i.Description.quantity() >= 2)
+                                        if (i.Description[0].quantity() >= 2)
                                         {
                                             <div class="listDs">
                                                 @{
-                                                    foreach (var j in i.Description.ListDs)
+                                                    foreach (var j in i.Description[0].ListDs)
                                                     {
                                                         <p class="itemDs">@j</p>
                                                     }
@@ -176,7 +176,7 @@
                                         }
                                         else
                                         {
-                                            <p class="txt02">@i.Description.ListDs[0]</p>
+                                            <p class="txt02">@i.Description[0].ListDs[0]</p>
                                         }
                                     }
                                 </li>

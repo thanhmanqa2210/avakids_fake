@@ -56,7 +56,6 @@ $(document).ready(function () {
         url: "/layout/data",
         type: "GET",
         contentType: "application/json;charset=utf-8",
-        dataType: "json",
         // cache: false,
         success: () => {
           var html = "";
