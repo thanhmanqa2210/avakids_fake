@@ -310,24 +310,21 @@ public class HomeController : Controller
         var newListData = new List<DetailsModel>();
         if (FilterItem.Order.ToUpper() == "% GIẢM NHIỀU")
         {
-            var ListDataVirtual = from item in ListData
-                                  orderby item.Price_percent descending
-                                  select item;
-            newListData = ListDataVirtual.ToList();
+            newListData = (from item in ListData
+                           orderby item.Price_percent descending
+                           select item).ToList();
         }
         else if (FilterItem.Order.ToUpper() == "GIÁ CAO ĐẾN THẤP")
         {
-            var ListDataVirtual = from item in ListData
-                                  orderby item.calculate() descending
-                                  select item;
-            newListData = ListDataVirtual.ToList();
+            newListData = (from item in ListData
+                           orderby item.calculate() descending
+                           select item).ToList();
         }
         else if (FilterItem.Order.ToUpper() == "GIÁ THẤP ĐẾN CAO")
         {
-            var ListDataVirtual = from item in ListData
-                                  orderby item.calculate()
-                                  select item;
-            newListData = ListDataVirtual.ToList();
+            newListData = (from item in ListData
+                           orderby item.calculate()
+                           select item).ToList();
         }
         else
         {
