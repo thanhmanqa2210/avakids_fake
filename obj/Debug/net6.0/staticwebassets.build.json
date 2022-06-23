@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LErgKPsq8B9FdAjAeJcTF0JHM3tao7eEBFGUOOTfdxU=",
+  "Hash": "SFv17tT/YF9hKSbfFiiw+l4mf/LNDmLTZh9afxAaclI=",
   "Source": "AvaKids_188269",
   "BasePath": "_content/AvaKids_188269",
   "Mode": "Default",
@@ -253,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Program\\C#\\Basic\\AvaKids_188269\\wwwroot\\js\\sortProducts.js",
+      "SourceId": "AvaKids_188269",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Program\\C#\\Basic\\AvaKids_188269\\wwwroot\\",
+      "BasePath": "_content/AvaKids_188269",
+      "RelativePath": "js/sortProducts.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\sortProducts.js"
     },
     {
       "Identity": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Program\\C#\\Basic\\AvaKids_188269\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",

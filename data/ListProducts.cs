@@ -13,7 +13,7 @@ namespace AvaKids_188269.data
             Price_old=1349000,Price_percent=26,Product_code="#258905",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                  new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
-            ListDs = new List<string>() { "Antona" } 
+            ListDs = new List<string>() { "Antona" }
             }} },
             new DetailList() { Name = "Loại", Description =new List<ItemDescription>(){new ItemDescription(){
               ListDs  =  new List<string>(){"Đồ chơi bé trai","Đồ chơi lắp ráp"}
@@ -194,7 +194,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=7,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1269000,Price_percent=20,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "STAR KIDS" }
@@ -230,7 +230,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=15,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1269000,Price_percent=23,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "VECTO" }
@@ -266,7 +266,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=16,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1269000,Price_percent=23,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "NIKKO" }
@@ -302,7 +302,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=17,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1269000,Price_percent=25,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "GOGO BUS" }
@@ -338,7 +338,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=18,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1300000,Price_percent=25,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "Lego (Đan Mạch)" }
@@ -374,7 +374,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=19,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1279000,Price_percent=27,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "NIKKO" }
@@ -410,7 +410,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=20,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1269000,Price_percent=27,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "LOL" }
@@ -446,7 +446,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=21,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1229000,Price_percent=28,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "LUCKY BOY" }
@@ -482,7 +482,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=22,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1229000,Price_percent=29,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "LX" }
@@ -518,7 +518,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=23,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1999000,Price_percent=29,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "BKK" }
@@ -554,7 +554,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=24,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1999000,Price_percent=30,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "LEAPFROG" }
@@ -590,7 +590,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=25,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1569000,Price_percent=30,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "TANAKA" }
@@ -626,7 +626,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=26,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1569000,Price_percent=22,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "LOL" }
@@ -662,7 +662,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=27,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1469000,Price_percent=15,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "Lego" }
@@ -698,7 +698,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=28,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1669000,Price_percent=15,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "587" }
@@ -734,7 +734,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=29,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1669000,Price_percent=14,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "587" }
@@ -770,7 +770,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=30,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1299000,Price_percent=14,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "DUKA" }
@@ -806,7 +806,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=31,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1299000,Price_percent=10,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "DUKA" }
@@ -842,7 +842,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=32,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=2269000,Price_percent=12,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "TingLok" }
@@ -878,7 +878,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=33,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1769000,Price_percent=11,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "Slimy" }
@@ -914,7 +914,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=34,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1266000,Price_percent=12,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "Slimy" }
@@ -950,7 +950,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=35,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1250000,Price_percent=22,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "Ziyu" }
@@ -986,7 +986,7 @@ namespace AvaKids_188269.data
             }},
             new DetailsModel(){ID=36,
             Title="Đồ chơi cắm trại ngoài trời Lego Friends 41392LG (241 chi tiết)",
-            Price_old=1269000,Price_percent=21,Product_code="#258963",
+            Price_old=1777000,Price_percent=24,Product_code="#258963",
             PromotionDate="31/05",DetailsInfo=new List<DetailList>(){
                 new DetailList() { Name = "Thương hiệu", Description =new List<ItemDescription>(){new ItemDescription(){
             ListDs = new List<string>() { "Antona)" }

@@ -82,13 +82,6 @@ $(document).ready(() => {
       $(".wrapper-filter").removeClass("top_fixed_filter");
     }
   });
-  $(".click-sort").click(() => {
-    if ($(".sort-select-main").css("display") == "block") {
-      $(".sort-select-main").css({ display: "none" });
-    } else {
-      $(".sort-select-main").css({ display: "block" });
-    }
-  });
 
   $(".c-btnbox").click(function () {
     if ($(this).hasClass("active")) {

@@ -205,7 +205,6 @@ public class HomeController : Controller
 
     public IActionResult ProductItem(FilterQuery FilterItem)
     {
-
         var listProducts = new ListProducts();
         var ListData = new List<DetailsModel>();
         var data = from dataItem in listProducts.Products()
@@ -214,7 +213,7 @@ public class HomeController : Controller
                     select dataItem;
         string[] newNameFilter = { };
         string[] newFilterValue = { };
-        int index = 0;
+        // int index = 0;
         if (FilterItem.FilterValue != null && FilterItem.NameFilter != null)
         {
             data = from dataItem in listProducts.Products()
@@ -226,6 +225,7 @@ public class HomeController : Controller
                    select dataItem;
             newFilterValue = FilterItem.FilterValue.Split(", ");
             newNameFilter = FilterItem.NameFilter.Split(", ");
+            // ---------------------------------------------------------------------
             // Một Filter
             if (newNameFilter.Count() == 1)
             {
@@ -259,6 +259,7 @@ public class HomeController : Controller
                     }
                 }
             }
+            // ----------------------------------------------------------------------
             // hơn 1 filterName
             else
             {
@@ -269,7 +270,7 @@ public class HomeController : Controller
                 ListVirtualx = datax.ToList();
                 foreach (var itemName in newNameFilter)
                 {
-                    index += 1;
+                    // index += 1;
 
                     foreach (var itemValue in newFilterValue)
                     {
@@ -287,10 +288,10 @@ public class HomeController : Controller
                     }
                     ListVirtualx = ListVirtual;
                     ListVirtual = new List<DetailsModel>();
-                    if (index > 1)
-                    {
+                    // if (index > 1)
+                    // {
 
-                    }
+                    // }
 
                 }
                 foreach (var idata in ListVirtualx)
@@ -300,19 +301,39 @@ public class HomeController : Controller
             }
 
         }
-        else if (FilterItem.Order != null)
-        {
-
-        }
-        else if (FilterItem.Price != null)
-        {
-
-        }
         else
         {
             ListData = data.ToList();
         }
-        return PartialView("~/Views/Home/ProductItem.cshtml", ListData);
+
+        Console.WriteLine(ListData.Count);
+        var newListData = new List<DetailsModel>();
+        if (FilterItem.Order.ToUpper() == "% GIẢM NHIỀU")
+        {
+            var ListDataVirtual = from item in ListData
+                                  orderby item.Price_percent descending
+                                  select item;
+            newListData = ListDataVirtual.ToList();
+        }
+        else if (FilterItem.Order.ToUpper() == "GIÁ CAO ĐẾN THẤP")
+        {
+            var ListDataVirtual = from item in ListData
+                                  orderby item.calculate() descending
+                                  select item;
+            newListData = ListDataVirtual.ToList();
+        }
+        else if (FilterItem.Order.ToUpper() == "GIÁ THẤP ĐẾN CAO")
+        {
+            var ListDataVirtual = from item in ListData
+                                  orderby item.calculate()
+                                  select item;
+            newListData = ListDataVirtual.ToList();
+        }
+        else
+        {
+            newListData = ListData;
+        }
+        return PartialView("~/Views/Home/ProductItem.cshtml", newListData);
     }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
