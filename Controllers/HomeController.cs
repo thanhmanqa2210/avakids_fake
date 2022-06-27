@@ -2,13 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using AvaKids_188269.Models;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-
 using AvaKids_188269.data;
 using AvaKids_188269.Models.Data;
 
@@ -18,6 +11,9 @@ namespace AvaKids_188269.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+
+    public static decimal pageX { get; set; } = 1;
+    public static decimal totalPages { get; set; } = 0;
 
     public HomeController(ILogger<HomeController> logger)
     {
@@ -196,15 +192,13 @@ public class HomeController : Controller
         };
         return View(model);
     }
-    public IActionResult Products()
-    {
-        return View();
 
-    }
     [HttpGet]
 
     public IActionResult ProductItem(FilterQuery FilterItem)
     {
+        pageX = FilterItem.Page;
+        totalPages = FilterItem.totalPages;
         var listProducts = new ListProducts();
         var ListData = new List<DetailsModel>();
         var data = from dataItem in listProducts.Products()
@@ -306,7 +300,6 @@ public class HomeController : Controller
             ListData = data.ToList();
         }
 
-        Console.WriteLine(ListData.Count);
         var newListData = new List<DetailsModel>();
         if (FilterItem.Order.ToUpper() == "% GIẢM NHIỀU")
         {
@@ -330,7 +323,50 @@ public class HomeController : Controller
         {
             newListData = ListData;
         }
-        return PartialView("~/Views/Home/ProductItem.cshtml", newListData);
+
+        var skipData = newListData;
+
+        if (skipData.Count <= 12)
+        {
+            skipData = newListData;
+
+        }
+        else
+        {
+            skipData = newListData.Skip((((int)pageX) - 1) * 12).Take(newListData.Count - ((((int)pageX) - 1) * 12)).ToList();
+
+        }
+        var nQuality = (newListData.Count / 12);
+        var balance = newListData.Count % 12;
+        if (balance > 0)
+        {
+            nQuality += 1;
+            totalPages = nQuality;
+        }
+        else
+        {
+            totalPages = newListData.Count / 12;
+        }
+        Console.WriteLine(totalPages);
+        return PartialView("~/Views/Home/ProductItem.cshtml", skipData);
+    }
+    public IActionResult Products(int total)
+    {
+        int x = (int)totalPages;
+        if (total == 0)
+        {
+            x = (int)totalPages;
+        }
+        else
+        {
+
+            x = total;
+        }
+        Console.WriteLine("page:" + pageX);
+        Console.WriteLine(x);
+
+        return View(x);
+
     }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

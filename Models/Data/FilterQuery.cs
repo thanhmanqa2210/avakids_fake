@@ -9,15 +9,19 @@ namespace AvaKids_188269.Models.Data
         public string FilterValue { get; set; }
         public int ArrayValueAmount { get; set; }
         public string Order { get; set; }
-        public string Price { get; set; }
+        public decimal Page { get; set; }
+        public decimal totalPages { get; set; }
+
 
         public FilterQuery()
         {
             this.FilterValue = "";
-            this.Price = "";
             this.Order = "";
             this.NameFilter="";
             this.ArrayValueAmount = 0;
+            this.Page = 0;
+            this.totalPages = 0;
+
         }
     }
 }

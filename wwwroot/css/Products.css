@@ -774,6 +774,25 @@
     text-decoration: none;
 }
 
+.pagbreak .pagpagenumber>.page-item {
+    background-color: #f6f8fa;
+    border-radius: 4px;
+    color: #222;
+    display: block;
+    font-size: 16px;
+    line-height: 32px;
+    height: 32px;
+    margin: 0 5px;
+    text-align: center;
+    width: 41px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pagpagenumber {
+    display: flex;
+}
+
 .button-pagbreak::before {
     border-top: 1px solid #555;
     border-left: 1px solid #555;

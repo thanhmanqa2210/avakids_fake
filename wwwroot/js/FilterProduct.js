@@ -3,6 +3,7 @@ $(document).ready(function () {
     ArrayValue: [],
     ArrayAmount: 0,
     NFilter: [],
+    pageN: 1,
     SortProduct: "default feature",
   };
 
@@ -11,7 +12,8 @@ $(document).ready(function () {
     ArrayValueAmount: 0,
     NameFilter: "",
     Order: ArrayValues.SortProduct,
-    Price: "",
+    totalPages: 1,
+    Page: 1,
   };
 
   //// ------------------------------------------------------
@@ -77,7 +79,6 @@ $(document).ready(function () {
       ArrayValueAmount: ArrayValues.ArrayAmount,
       Order: ArrayValues.SortProduct,
       NameFilter: ArrayValues.NFilter.join(", "),
-      Price: "",
     };
     $.ajax({
       url: "/home/ProductItem/",
@@ -87,6 +88,7 @@ $(document).ready(function () {
       data: FilterItem,
       success: function (data) {
         var x = (data.match(/data-id/g) || []).length / 2;
+        FilterItem.totalPages = Math.ceil(x / 12);
         $(".total-reloading").text(x);
       },
       error: function (errormessage) {
@@ -111,8 +113,19 @@ $(document).ready(function () {
   });
   //  khi đã click chuột
   $(".filter-button>.btn-filter-readmore").click(function (e) {
-    e.preventDefault();
-    e.stopPropagation();
+    // e.preventDefault();
+    // e.stopPropagation();
+      $.ajax({
+        url: "/home/Products/",
+        type: "GET",
+        contentType: "application/json; charset=UTF-8",
+        dataType: "html",
+        data: FilterItem.totalPages,
+        success: function (data) {},
+        error: function (errormessage) {
+          alert("Lỗi khi chèn dữ liệu");
+        },
+      });
     $.ajax({
       url: "/home/ProductItem/",
       type: "GET",
@@ -120,12 +133,14 @@ $(document).ready(function () {
       dataType: "html",
       data: FilterItem,
       success: function (data) {
+
         $("#model_product").html(data);
       },
       error: function (errormessage) {
         alert("Lỗi khi chèn dữ liệu");
       },
     });
+  
   });
   // ---------------------------------
 
@@ -158,5 +173,24 @@ $(document).ready(function () {
         alert("Lỗi khi chèn dữ liệu");
       },
     });
+  });
+  $("a.page-item").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    FilterItem.Page = Number($(this).text());
+    $.ajax({
+      url: "/home/ProductItem/",
+      type: "GET",
+      contentType: "application/json; charset=UTF-8",
+      dataType: "html",
+      data: FilterItem,
+      success: function (data) {
+        $("#model_product").html(data);
+      },
+      error: function (errormessage) {
+        alert("Lỗi khi chèn dữ liệu");
+      },
+    });
+    console.log($(this).text());
   });
 });

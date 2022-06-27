@@ -1,29 +1,25 @@
-
 @{
     foreach (var i in Model)
     {
-        
+
         <li class="item " data-id="274713">
             <a href="/do-choi/do-choi-tre-em-lap-rap-tram-canh-sat-luu-dong-lego-60315-436-chi-tiet-mau-ngau-nhien"
             class="main-contain" data-code="9885076000278" data-type="1" data-s="Nomal" data-scenrioid="0" data-site="17"
-            data-pro="3" data-cache="True"
-                data-name="@i.Title - Màu ngẫu nhiên"
-            data-id="274713" data-price="1439100.0" data-brand="Lego" data-cate="Đồ chơi" data-box="BoxHome">
+            data-pro="3" data-cache="True" data-name="@i.Title - Màu ngẫu nhiên" data-id="274713" data-price="1439100.0"
+            data-brand="Lego" data-cate="Đồ chơi" data-box="BoxHome">
                 <div class="item-img">
                     <img loading="lazy"
                     data-src="https://cdn.tgdd.vn/Products/Images/10421/274713/do-choi-tram-canh-sat-luu-dong-lego-city-60315-600x600.jpg"
-                    class=" ls-is-cached lazyloaded"
-                    alt="@i.Title - Màu ngẫu nhiên"
-                    width="300" height="300"
+                    class=" ls-is-cached lazyloaded" alt="@i.Title - Màu ngẫu nhiên" width="300" height="300"
                     src="https://cdn.tgdd.vn/Products/Images/10421/274713/do-choi-tram-canh-sat-luu-dong-lego-city-60315-600x600.jpg">
                 </div>
                 <div class="item-wrap">
                     <h3>@i.Title - Màu ngẫu nhiên
                     </h3>
-                    
+
                     <p class="price-current">@i.priceNew()₫</p>
                     <div class="boxprice">
-                                <p class="price-old">@i.priceOld()₫</p>
+                        <p class="price-old">@i.priceOld()₫</p>
                         <span class="percent">@i.Price_percent%</span>
                     </div>
                 </div>

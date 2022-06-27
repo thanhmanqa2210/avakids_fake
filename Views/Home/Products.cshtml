@@ -1,15 +1,16 @@
+@model int
 
 @{
     ViewData["Title"] = "Đồ chơi trẻ em chính hãng, giá tốt, an toàn, giảm giá, hấp dẫn";
 
 }
-@{
+@* @{
         var pagingModel=new AvaKids_188269.Models.Pagination.Pagination(){
                 currentPage=1,
-                countPages=4,
+                countPages=5,
                 generateUrl=(int? p)=>"page="+p
         };
-}
+} *@
 <div class="h-pds">
     <div class="h-owl">
         <img src="https://cdn.tgdd.vn/2022/06/banner/pVN0wVLM-1200x200-1.png" alt="" class="owl-itm">
@@ -229,7 +230,7 @@ Duka                </a>
         </div>
         <div class="filter-button" style="display: block;">
                 <a href="javascript:void(0)" class="btn-filter-close">Bỏ chọn</a>
-                <a href="javascript:void(0)" class="btn-filter-readmore">Xem (<b class="total-reloading">0</b> kết quả)</a>
+                <a href="/home/products/" class="btn-filter-readmore">Xem (<b class="total-reloading">0</b> kết quả)</a>
         </div>
                 </div>
                 
@@ -429,7 +430,7 @@ Duka                        </a>
                     </div>
                     <div class="filter-button" style="display: block;">
                         <a href="javascript:void(0)" class="btn-filter-close">Bỏ chọn</a>
-                        <a href="javascript:void(0)" class="btn-filter-readmore">Xem (<b class="total-reloading">0</b> kết quả)</a>
+                        <a href="/home/products/" class="btn-filter-readmore">Xem (<b class="total-reloading">0</b> kết quả)</a>
                     </div>
                 </div>
             </div>
@@ -554,19 +555,21 @@ Duka                        </a>
         <ul id="model_product" class="list-product-col6">
         </ul>
     </div>
-@* <div id="paging">
-        <div class="pagbreak fInter" data-total-page="4">
-                <a href="javascript:;"  id="_pgPreviousPage"
+<div id="paging">
+        <div class="pagbreak fInter" data-total-page="@Model">
+                <a href="#"  id="_pgPreviousPage"
                         class="button-pagbreak button-pagbreak-prev disabled" data-page="0">
                 </a>
-                <span class="active">1</span>
-                <a href="javascript:;"  class="page-item" data-page="2">2</a>
-                <a href="javascript:;"  class="page-item" data-page="3">3</a>
-                <a href="javascript:;"  class="page-item" data-page="4">4</a>
-                <a href="javascript:;" class="button-pagbreak button-pagbreak-next " id="_pgNextPage"
+                <div class="pagpagenumber">
+                @{
+                        for (var i = 1; i <= Model; i++)
+                        {
+                                <a href="https://localhost:7160/home/products/@i"  class="page-item" data-page="@i">@i</a>
+                        }
+                }
+                </div>
+                <a href="" class="button-pagbreak button-pagbreak-next " id="_pgNextPage"
                          data-page="2"></a>
         </div>
-</div> *@
-<partial name="../Shared/Pages/_paging.cshtml" model="@pagingModel"/>
-
+</div>
 </div>
